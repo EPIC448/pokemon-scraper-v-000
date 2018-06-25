@@ -11,7 +11,6 @@ class Pokemon
     @type = type
     @db = db
     @hp = hp
-    binding.pry
     @@all << self
   end
 
