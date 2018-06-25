@@ -25,6 +25,7 @@ class Pokemon
 
  # for self.find method, it return array every attribute from the pokeman table where each colume value is included in an array.
  # then we select each of the index.. Aka return each of the roll with they values added
+
    def self.find(id,db)
       rolls_in_colums = db.execute("SELECT * FROM pokemon WHERE id  = ?", id).flatten
       self.new(id: rolls_in_colums[0], name: rolls_in_colums[1], type: rolls_in_colums[2], db: db, hp: rolls_in_colums[3])
